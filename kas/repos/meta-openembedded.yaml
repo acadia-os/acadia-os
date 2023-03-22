@@ -1,0 +1,10 @@
+repos:
+  meta-openembedded:
+    url: http://git.openembedded.org/meta-openembedded
+    path: layers/meta-openembedded
+    refspec: master
+    layers:
+      meta-oe:
+      meta-python:
+      meta-networking:
+      meta-perl:

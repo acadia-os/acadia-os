@@ -1,0 +1,5 @@
+repos:
+  meta-ros:
+    url: https://github.com/ros/meta-ros.git
+    path: layers/meta-ros
+    refspec: master

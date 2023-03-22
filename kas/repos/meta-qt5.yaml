@@ -1,0 +1,5 @@
+repos:
+  meta-qt5:
+    url: https://github.com/meta-qt5/meta-qt5/
+    path: layers/meta-qt5
+    refspec: master

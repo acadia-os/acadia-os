@@ -1,0 +1,4 @@
+machine: raspberrypi4
+distro: poky
+target:
+  - core-image-base
