@@ -3,10 +3,15 @@
 # Make sure you have sourced the Yocto Project environment
 # source oe-init-build-env
 
+if [ $# -ne 3 ]; then
+    echo "Usage: $0 <recipe-name> <source-url> <layer-path>"
+    exit 1
+fi
+
 # Set variables
-RECIPE_NAME="example-recipe"
-SOURCE_URL="https://github.com/user/example.git"
-LAYER_PATH="meta-custom"
+RECIPE_NAME= $1
+SOURCE_URL= $2
+LAYER_PATH= $3
 
 # Add a new recipe
 devtool add "${SOURCE_URL}" "${RECIPE_NAME}"
@@ -21,7 +26,7 @@ devtool build "${RECIPE_NAME}"
 devtool testimage -i core-image-minimal
 
 # Update the recipe to a new version (replace NEW_SOURCE_URL with the updated source URL)
-NEW_SOURCE_URL="https://github.com/user/example.git"
+NEW_SOURCE_URL="https://github.com/acadia-os/sdcard-utils.git"
 devtool upgrade "${RECIPE_NAME}" "${NEW_SOURCE_URL}"
 
 # Reset the environment (removes changes made to the recipe)
